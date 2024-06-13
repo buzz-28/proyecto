@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        padding: 25px;
+        background-color: white;
+        color: black;
+        font-size: 25px;
+      }
+      .dark-mode {
+        background-color: black;
+        color: white;
+      }
+      
+    </style>
+  </head>
+  <body>
+    <div>
+        <label class="switch">
+            <input type="checkbox" onclick="darkMode()" >
+            <span class="slider"></span>
+          
+          </label>
+    </div>
+    <script>
+      function darkMode() {
+        var element = document.body;
+        element.classList.toggle("dark-mode");
+      }
+    </script>
+     <!--boton-->
+<center>
+    <a href="/inicio.html"><button>
+      <span class="box">
+          Inicio
+      </span>
+  </button></a>
+  </center>
+  </body>
+    
+
+</html>
+<!DOCTYPE html>
+<style>
+    *{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    background:  #ffffff;
+    font-family: Bradley Hand ITC, Helvetica, sans-serif;
+    font-size: 130%;
+}
+#container{
+    width: 90%;
+    margin: 0px auto;
+}
+header h1{
+    background: #cc03e6;
+    height: 200px;
+    width: 100%;
+    text-align: center;
+    line-height: 200px;
+    color: #ffffff;
+    border-bottom: 10px solid #ffffff;
+    font-size: 50px;   
+}
+nav{
+    background: #000000;
+    height: 50px;
+    border-bottom: 5px solid #ffffff ;
+}
+nav ul li{
+    float: left;
+    list-style: none;
+    margin: 10px;
+    color: #ffffff;
+    font-size: 20px;
+    line-height: 30px;
+}
+.clear{
+    clear: both;
+}
+#contenido{
+    float: Right;
+    width: calc(70% - 70px);
+    min-height: 500px;
+    background: #ffffff;
+    padding: 40px;
+}
+.article{
+    color: #000000;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #000000;
+}
+aside{
+    float: Right;
+    width: calc(30% - 30px);
+    min-height: 1800px;
+    color: #ffffff;
+    background: #e603e2;
+    padding: 10px;
+}
+footer{
+    background: #000000;
+    color: #ffffff;
+    text-align: center;
+    height: 50px;
+    line-height: 50px;
+}
+.img-siete{
+    animation: mover 2s ease-in-out infinite;
+    width: 350px;
+    height: 400px;   
+}
+.video-de{
+    width: 350px;
+    height: 500px;
+    }
+   .img-siete{
+    animation: mover 2s ease-in-out infinite;
+    width: 350px;
+    height: 400px;
+   } 
+   /*boton inicio*/
+   .box {
+  width: 140px;
+  height: auto;
+  float: left;
+  transition: .5s linear;
+  position: relative;
+  display: block;
+  overflow: hidden;
+  padding: 15px;
+  text-align: center;
+  margin: 0 5px;
+  background: transparent;
+  text-transform: uppercase;
+  font-weight: 900;
+}
+
+.box:before {
+  position: absolute;
+  content: '';
+  left: 0;
+  bottom: 0;
+  height: 4px;
+  width: 100%;
+  border-bottom: 4px solid transparent;
+  border-left: 4px solid transparent;
+  box-sizing: border-box;
+  transform: translateX(100%);
+}
+
+.box:after {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  border-top: 4px solid transparent;
+  border-right: 4px solid transparent;
+  box-sizing: border-box;
+  transform: translateX(-100%);
+}
+
+.box:hover {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.box:hover:before {
+  border-color: #262626;
+  height: 100%;
+  transform: translateX(0);
+  transition: .3s transform linear, .3s height linear .3s;
+}
+
+.box:hover:after {
+  border-color: #262626;
+  height: 100%;
+  transform: translateX(0);
+  transition: .3s transform linear, .3s height linear .5s;
+}
+
+button {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  background: transparent;
+}
+/* Tema */
+.switch {
+  font-size: 17px;
+  position: relative;
+  display: inline-block;
+  width: 3.5em;
+  height: 2em;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #2196F3;
+  transition: .4s;
+  border-radius: 30px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 1.4em;
+  width: 1.4em;
+  border-radius: 20px;
+  left: 0.3em;
+  bottom: 0.3em;
+  background-color: yellow;
+  transition: .4s;
+}
+
+.switch input:checked + .slider:before {
+  background-color: black;
+  border-radius: 50px;
+  box-shadow: inset 9px 0px 1px 0px white;
+}
+
+.switch input:checked + .slider {
+  background-color: black;
+}
+
+.switch input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+.switch input:checked + .slider:before {
+  transform: translateX(1.5em);
+}
+</style>
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<title>Blog dos</title>
+</head>
+<body>
+    <div id="container">
+        <header>
+            <h1>TIPOS DE DEPRESIÓN</h1>
+        </header>
+        <nav>
+            <ul>
+                <li>Principal</li>
+                <li>Ayuda</li>
+                <li>Contacto</li>
+                </ul>
+                </nav>
+            <div class="clear"></div>
+        
+            <section id="contenido">
+                <artice class="article">
+                <h2 id="seccion1">1.Depresión mayor</h2>
+                <p>La depresión mayor es el tipo de trastorno depresivo más grave, pues cumple con toda la sintomatología anteriormente mencionada, además de presentar un notable riesgo de desarrollar las complicaciones más serias en las que puede derivar la depresión.<br>
+                    Su principal característica es que los episodios depresivos van apareciendo periódicamente en el tiempo y que mientras duran, la persona expresa una inmensa apatía. No es tristeza. Es falta de empatía consigo mismo y con lo que le rodea.<br>
+                    Empezando generalmente en la adolescencia o en los primeros años de la edad adulta, la depresión mayor suele manifestarse en episodios que duran unas 2 semanas. Después, pueden pasar meses o años sin manifestaciones, pero esta volverá a aparecer.<br>
+                    No suele estar causada por un desencadenante claro, por lo que no siempre hay un motivo que explique su aparición. A menudo, suele venir provocada por la genética, las características físicas y/o químicas del cerebro e incluso las hormonas de la persona.<br></p></artice>
+
+                <artice class="article">
+                    <h2 id="seccion2">2.Distimia</h2>
+                    <p>La distimia es similar a la depresión mayor, aunque en este caso la sintomatología es menos grave. Eso sí, es más prolongada en el tiempo. No van apareciendo episodios graves periódicamente, sino que la persona se ve inmersa en estos sentimientos de apatía de forma más constante.<br>
+                        El problema es que muchas veces, las personas con distimia también desarrollan episodios de depresión mayor. Esto, junto con el hecho de que las “crisis” puedan prolongarse hasta más de 2 años y que los síntomas no sean tan claros, hacen que la distimia deba ser detectada lo antes posible.<br></p>
+                    </artice>
+
+                    <artice class="article">
+                        <h2 id="seccion3">3.Depresión posparto</h2>
+                        <p>Hasta el 15% de las mujeres que dan a luz sufren este trastorno depresivo durante el primer año después del parto. Los cambios tanto físicos como emocionales, así como hormonales, por los que pasa una mujer después de que su bebé nazca hacen que sea posible que esta desarrolle depresión.<br>
+                            De todos modos, los síntomas no siempre son graves y aunque a veces puedan incluir algunos de los signos más característicos de la depresión, estos no suelen prolongarse más de unos meses. En cuanto el cuerpo recupera su estado físico y hormonal normal, la depresión tiende a desaparecer.<br>
+                            </p>
+                        </artice>
+
+                        <artice class="article">
+                            <h2 id="seccion4">4.Trastorno bipolar</h2>
+                            <p>El trastorno bipolar, aunque se puede incluir dentro de los tipos de depresión, engloba tanto trastornos depresivos como maníacos. Se trata de una de las formas más graves de la depresión, pues además de contar con episodios de depresión mayor, también incluye fases de manía, caracterizados por una euforia abrupta, hiperactividad, actos compulsivos, irritabilidad, problemas para dormir… Por ello, su detección y tratamiento precoz son de vital importancia.<br>
+                            </p>
+                            </artice>
+
+                            <artice class="article">
+                                <h2 id="seccion5">5. Depresión estacional</h2>
+                                <p>La estacional es un tipo de depresión que aparece en las personas de forma cíclica, desarrollándose siempre en una época concreta del año que suele ser el invierno. Los síntomas no son tan graves como los de la depresión mayor, pero una manera de identificarla es que los signos se intensifican con la llegada del frío e incluyen tristeza, aislamiento social, problemas para dormir, pérdida de vitalidad…<br>
+                                    No siempre hay una gran afectación a la capacidad para desempeñarse con normalidad, aunque siempre es importante solicitar atención profesional en caso de que haya dudas. Cabe destacar también que hay personas que la sufren en los meses de verano.<br>
+                                    </p>
+                                </artice>
+
+                                <artice class="article">
+                                    <h2 id="seccion6">6.Depresión psicótica</h2>
+                                    <p>La depresión psicótica es aquella que además de incluir los síntomas típicos de la depresión, también se manifiesta con signos psicóticos, es decir, alucinaciones y delirios que afectan a la forma de percibir la realidad. Esta distorsión psicológica, juntamente con los pensamientos depresivos, hacen que sea de suma importancia tanto diagnosticarla como tratarla de la forma más rápida posible, pues la probabilidad de desarrollar complicaciones graves es especialmente alta.<br>
+                                        </p>
+                                    </artice>
+
+                                    <artice class="article">
+                                        <h2 id="seccion7">7. Trastorno ansioso-depresivo</h2>
+                                        <p>Este tipo de trastorno mezcla tanto síntomas de depresión como de ansiedad, aunque estos no suelen ser extremos. Es decir, ni los episodios de depresión son tan graves como los de la depresión mayor ni la ansiedad es suficientemente seria como para afectar al desempeño de las actividades diarias.<br>
+                                            De todos modos, sí que compromete la calidad de vida de la persona, pues debe convivir con sentimientos de tristeza y de estrés. El problema es que se trata de un trastorno constante en el tiempo, por lo que la persona acaba creyendo que es simplemente su forma de ser. Pero no. También hay formas de detectarla y de tratarla.<br>                                            
+                                            </p>
+                                        </artice>
+
+                                        <artice class="article">
+                                            <h2 id="seccion8">8. Ciclotimia</h2>
+                                            <p>En la ciclotimia, como su propio nombre indica, la persona pasa por ciclos en cuanto a su estado de ánimo. Durante unos días, es posible que aparezcan síntomas de depresión, de ansiedad e incluso de manías. Sin embargo, tienden a desaparecer a las pocas semanas y puedan tardar en regresar, por lo que no siempre es fácil de detectar para la persona, que llega a creer que son cosas normales de su forma de ser. De igual manera, hay formas de tratarla.<br>
+                                                </p>
+                                            </artice>
+
+                                            <artice class="article">
+                                                <h2 id="seccion9">9.Depresión atípica</h2>
+                                                <p>La depresión atípica se encuentra en la frontera entre lo que puede catalogarse como depresión y lo que son simplemente fases de cambio en el estado de ánimo. Y es que su principal característica es que aunque la persona pueda ser víctima de pensamientos fuertes de tristeza, apatía y otros signos típicos de la depresión, estos pueden desaparecer de forma relativamente sencilla ante la vivencia de sucesos positivos. De todos modos, es importante tenerla en cuenta y tratarla para conseguir que los episodios aparezcan con la menor tendencia posible.<br>
+                                                    </p>
+                                                </artice>
+            </section>
+
+            <aside>
+               <form>
+                <br><h2>ÍNDICE<BR><a href="#seccion1">1. Depresión mayor</a><br><a href="#seccion2">2. Distimia</a><br><a href="#seccion3">3. Depresión posparto</a><br><a href="#seccion4">4. Trastorno bipolar</a><br><a href="#seccion5">5. Depresión estacional</a><br><a href="#seccion6">6. Depresión psicótica</a><br><a href="#seccion7">7. Trastorno ansioso-depresivo</a><br><a href="#seccion8">8. Ciclotimia<a><br><a href="#seccion9">9. Depresión atípica</a></h2>
+                <br><img src="siete.jpg" class="img-siete">
+               <marquee><h2>«La herida es el lugar donde la luz entra en ti.» – Rumi</h2></marquee><br>
+                <video  src="DEPRESION.mp4" class="video-de" controls></video><br>
+               <br><p><h2><marquee>«Y una vez que la tormenta haya pasado, no recordarás cómo lo lograste, cómo te las arreglaste para sobrevivir. Ni siquiera estarás seguro de si la tormenta ha terminado realmente. Pero una cosa es segura. Cuando salgas de la tormenta, no serás la misma persona que entró.» – Haruki Murakami</h2></marquee>
+                <br><br><img src="siete.jpg" class="img-siete">
+            </form>
+            </aside>
+            
+    </div>
+</body>
+</html>

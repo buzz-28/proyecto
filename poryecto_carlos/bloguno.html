@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        padding: 25px;
+        background-color: white;
+        color: black;
+        font-size: 25px;
+      }
+      .dark-mode {
+        background-color: black;
+        color: white;
+      }
+      /*boton inicio*/
+      .box {
+  width: 140px;
+  height: auto;
+  float: left;
+  transition: .5s linear;
+  position: relative;
+  display: block;
+  overflow: hidden;
+  padding: 15px;
+  text-align: center;
+  margin: 0 5px;
+  background: transparent;
+  text-transform: uppercase;
+  font-weight: 900;
+}
+
+.box:before {
+  position: absolute;
+  content: '';
+  left: 0;
+  bottom: 0;
+  height: 4px;
+  width: 100%;
+  border-bottom: 4px solid transparent;
+  border-left: 4px solid transparent;
+  box-sizing: border-box;
+  transform: translateX(100%);
+}
+
+.box:after {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  border-top: 4px solid transparent;
+  border-right: 4px solid transparent;
+  box-sizing: border-box;
+  transform: translateX(-100%);
+}
+
+.box:hover {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.box:hover:before {
+  border-color: #262626;
+  height: 100%;
+  transform: translateX(0);
+  transition: .3s transform linear, .3s height linear .3s;
+}
+
+.box:hover:after {
+  border-color: #262626;
+  height: 100%;
+  transform: translateX(0);
+  transition: .3s transform linear, .3s height linear .5s;
+}
+
+button {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  background: transparent;
+}
+/* Tema */
+.switch {
+  font-size: 17px;
+  position: relative;
+  display: inline-block;
+  width: 3.5em;
+  height: 2em;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #2196F3;
+  transition: .4s;
+  border-radius: 30px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 1.4em;
+  width: 1.4em;
+  border-radius: 20px;
+  left: 0.3em;
+  bottom: 0.3em;
+  background-color: yellow;
+  transition: .4s;
+}
+
+.switch input:checked + .slider:before {
+  background-color: black;
+  border-radius: 50px;
+  box-shadow: inset 9px 0px 1px 0px white;
+}
+
+.switch input:checked + .slider {
+  background-color: black;
+}
+
+.switch input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+.switch input:checked + .slider:before {
+  transform: translateX(1.5em);
+}
+    </style>
+  </head>
+  <body>
+    <div>
+      <!--Tema-->
+        <label class="switch">
+            <input type="checkbox" onclick="darkMode()" >
+            <span class="slider"></span>
+          
+          </label>
+    </div>
+    <script>
+      function darkMode() {
+        var element = document.body;
+        element.classList.toggle("dark-mode");
+      }
+    </script>
+  </body>
+  <!--boton-->
+<center>
+  <a href="/inicio.html"><button>
+    <span class="box">
+        Inicio
+    </span>
+</button></a>
+</center>
+
+</html>
+<!DOCTYPE html>
+<style>
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    background:  #ffffff;
+    font-family: Bradley Hand ITC, Helvetica, sans-serif;
+    font-size: 130%;
+}
+#container{
+    width: 90%;
+    margin: 0px auto;
+}
+header h1{
+    background: #cc03e6;
+    height: 200px;
+    width: 100%;
+    text-align: center;
+    line-height: 200px;
+    color: #ffffff;
+    border-bottom: 10px solid #ffffff;
+    font-size: 50px;   
+}
+nav{
+    background: #000000;
+    height: 50px;
+    border-bottom: 5px solid #ffffff ;
+}
+nav ul li{
+    float: left;
+    list-style: none;
+    margin: 10px;
+    color: #ffffff;
+    font-size: 20px;
+    line-height: 30px;
+}
+.clear{
+    clear: both;
+}
+#contenido{
+    float: left;
+    width: calc(80% - 80px);
+    min-height: 500px;
+    background: #ffffff;
+    padding: 40px;
+}
+.article{
+    color: #000000;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #000000;
+}
+aside{
+    float: left;
+    width: calc(20% - 20px);
+    min-height: 1050px;
+    color: #ffffff;
+    background: #e603e2;
+     
+    padding: 10px;
+}
+footer{
+    background: #000000;
+    color: #ffffff;
+    text-align: center;
+    height: 50px;
+    line-height: 50px;
+}
+.img-fel{
+    width: 250px;
+    height: 400px;
+    }
+    .img-4{
+        width: 250px;
+        height: 400px;   
+    }
+</style>
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<title>Blog uno</title>
+</head>
+<body>
+    <div id="container">
+        <header>
+            <h1>CARACTERISTICAS DE LA DEPRESION</h1>
+        </header>
+        <nav>
+            <ul>
+                <li>Principal</li>
+                <li>Ayuda</li>
+                <li>Contacto</li>
+                </ul>
+                </nav>
+            <div class="clear"></div>
+        
+            <section id="contenido">
+                <artice class="article">
+                <h2>Tristeza</h2>
+                <p>La emoción predominante es la tristeza que se puede manifestar de distintas formas, por una parte, a través del llanto espontáneo.
+                    <br>Este llanto puede en ocasiones ser evocado por pensamientos en concreto, como puede aparecer de forma difusa sin estar ligado a alguna razón en particular.<BR>
+                    La tristeza también puede expresarse por enlentecimiento, bajo tono de voz, sensación de vacío o desánimo en general.</p>
+                </artice>
+
+                <artice class="article">
+                    <h2>Incapacidad hacia el disfrute</h2>
+                    <p>Una de las características diferenciales de esta condición y algo pasajero es precisamente la pérdida del disfrute, cuando algo que anteriormente resultaba placentero ya no lo es.
+                       <br> A diferencia del desánimo o la tristeza temporal o circunstancial en el que la persona puede volver a hacer algo que realmente le gusta con agrado.
+                        </p>
+                    </artice>
+
+                    <artice class="article">
+                        <h2>Problemas de sueño</h2>
+                        <p>Las dificultades en el sueño se pueden observar de dos maneras, bien sea por falta de sueño, es decir, insomnio, lo que lleva a dormir muy poco y sentir menos energía.<BR>
+                            Por otra parte, está el lado opuesto cuando se presenta un exceso de sueño, esto también hace que la persona utilice el dormir para no pensar y evadir su realidad.<BR></p>
+                        </artice>
+
+                        <artice class="article">
+                            <h2>Exceso de preocupación</h2>
+                            <p>Otra de las características de la depresión es la incertidumbre por el futuro y la sensación de que algo terrible puede pasar, así como los pensamientos sobre la muerte o distintas calamidades, están también presentes.<BR>
+                                Las preocupaciones constantes hacen que los pensamientos evoquen emociones negativas que le afectan en su conducta, convirtiéndose en un ciclo difícil de romper.<BR>
+                                </p>
+                            </artice>
+
+                            <artice class="article">
+                                <h2>Aislamiento</h2>
+                                <p>La siguiente característica está relacionada a la tendencia de la persona deprimida en aislarse, en ocasiones puede ser por la falta de comprensión de quienes le rodean.<BR>
+                                    En otras, por las propias dificultades para participar de cualquier actividad, la falta de energía y el desánimo van ganando terreno y poco a poco se va encerrando llegando a pasar días sin salir.<BR>
+                                    </p>
+                                </artice>
+
+                                <artice class="article">
+                                    <h2>Desorden alimenticio</h2>
+                                    <p>Al igual que ocurre con el sueño, la alimentación también puede verse afectada de dos formas, o bien por falta de apetito o por exceso. 
+                                        Este cambio en los hábitos alimenticios contribuye con el resto de los síntomas presentes, como por ejemplo la falta de energía o los sentimientos de culpa.<BR>
+                                        </p>
+                                    </artice>
+
+                                    <artice class="article">
+                                        <h2>Sentimiento de culpa</h2>
+                                        <p>La culpa se hace presente de forma continua, llena los pensamientos de reproches y eventos del pasado que son imposibles de cambiar, aumentando la tristeza en la persona.<BR>
+                                            Surge la idea de que no se es capaz de hacer nada bien, se siente inútil e imposibilitado de salir de aquel agujero en el que se encuentra, lo que puede ser un gran riesgo hacia la conducta suicida.<BR>
+                                            </p>
+                                        </artice>
+            </section>
+
+            <aside>
+               <form>
+                <br><img src="collage.jpg" class="img-fel"><br><br>
+                <p><h3>!Cada día es una nueva oportunidad para intentar lo que quieras¡</h3></p><br><br>
+                <img src="img4.jpg" class="img-4">
+               </form>
+            </aside>
+            
+    </div>
+</body>
+</html>

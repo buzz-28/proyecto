@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        padding: 25px;
+        background-color: white;
+        color: black;
+        font-size: 25px;
+      }
+      .dark-mode {
+        background-color: black;
+        color: white;
+      }
+     
+    </style>
+  </head>
+     <!--boton-->
+<center>
+    <a href="/inicio.html"><button>
+      <span class="box">
+          Inicio
+      </span>
+  </button></a>
+  </center>
+  <body>
+    <div>
+        <label class="switch">
+            <input type="checkbox" onclick="darkMode()" >
+            <span class="slider"></span>
+          
+          </label>
+    </div>
+    <script>
+      function darkMode() {
+        var element = document.body;
+        element.classList.toggle("dark-mode");
+      }
+    </script>
+  </body>
+</html>
+<!DOCTYPE html>
+<style>
+    *{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    background:  #ffffff;
+    font-family: Bradley Hand ITC, Helvetica, sans-serif;
+    font-size: 130%;
+}
+#container{
+    width: 90%;
+    margin: 0px auto;
+}
+header h1{
+    background: #117b23;
+    height: 230px;
+    width: 100%;
+    text-align: center;
+    line-height: 200px;
+    color: #ffffff;
+    border-bottom: 10px solid #ffffff;
+    font-size: 50px;   
+}
+nav{
+    background: #000000;
+    height: 50px;
+    border-bottom: 5px solid #ffffff ;
+}
+nav ul li{
+    float: left;
+    list-style: none;
+    margin: 10px;
+    color: #ffffff;
+    font-size: 20px;
+    line-height: 30px;
+}
+.clear{
+    clear: both;
+}
+#contenido{
+    float: right;
+    width: calc(65% - 65px);
+    min-height: 500px;
+    background: #ffffff;
+    padding: 40px;
+}
+.article{
+    color: #000000;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #000000;
+}
+aside{
+    float: right;
+    width: calc(35% - 35px);
+    min-height: 400px;
+    background: #117b23;
+    padding: 10px;
+}
+footer{
+    background: #000000;
+    color: #ffffff;
+    text-align: center;
+    height: 50px;
+    line-height: 50px;
+}
+.img-seis{
+    width: 400px;
+    height: 300px;
+    }
+    .img-cuatro{
+    width: 400px;
+    height: 300px;
+    }
+    .img-cinco{
+    width: 400px;
+    height: 300px;
+    }
+     /*boton inicio*/
+   .box {
+  width: 140px;
+  height: auto;
+  float: left;
+  transition: .5s linear;
+  position: relative;
+  display: block;
+  overflow: hidden;
+  padding: 15px;
+  text-align: center;
+  margin: 0 5px;
+  background: transparent;
+  text-transform: uppercase;
+  font-weight: 900;
+}
+
+.box:before {
+  position: absolute;
+  content: '';
+  left: 0;
+  bottom: 0;
+  height: 4px;
+  width: 100%;
+  border-bottom: 4px solid transparent;
+  border-left: 4px solid transparent;
+  box-sizing: border-box;
+  transform: translateX(100%);
+}
+
+.box:after {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  border-top: 4px solid transparent;
+  border-right: 4px solid transparent;
+  box-sizing: border-box;
+  transform: translateX(-100%);
+}
+
+.box:hover {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.box:hover:before {
+  border-color: #262626;
+  height: 100%;
+  transform: translateX(0);
+  transition: .3s transform linear, .3s height linear .3s;
+}
+
+.box:hover:after {
+  border-color: #262626;
+  height: 100%;
+  transform: translateX(0);
+  transition: .3s transform linear, .3s height linear .5s;
+}
+
+button {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  background: transparent;
+}
+/* Tema */
+.switch {
+  font-size: 17px;
+  position: relative;
+  display: inline-block;
+  width: 3.5em;
+  height: 2em;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #2196F3;
+  transition: .4s;
+  border-radius: 30px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 1.4em;
+  width: 1.4em;
+  border-radius: 20px;
+  left: 0.3em;
+  bottom: 0.3em;
+  background-color: yellow;
+  transition: .4s;
+}
+
+.switch input:checked + .slider:before {
+  background-color: black;
+  border-radius: 50px;
+  box-shadow: inset 9px 0px 1px 0px white;
+}
+
+.switch input:checked + .slider {
+  background-color: black;
+}
+
+.switch input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+.switch input:checked + .slider:before {
+  transform: translateX(1.5em);
+}
+</style>
+<html lang="es">
+<head> 
+<meta charset="utf-8"/>
+<title>Blog uno</title>
+</head>
+<body>
+    <div id="container">
+        <header>
+            <h1>COMO ENTENDER LA DEPRESION DE UNA PERSONA</h1>
+        </header>
+        <nav>
+            <ul>
+                <li>Principal</li>
+                <li>Ayuda</li>
+                <li>Contacto</li>
+                </ul>
+                </nav>
+            <div class="clear"></div>
+        
+            <section id="contenido">
+                <artice class="article">
+                <h2>La depresión es una afección grave. </h2><br>
+                <p>No subestime la gravedad de la depresión. La depresión drena la energía, el optimismo y la motivación de una persona. Su ser querido con depresión no puede «salir de la depresión» solo con fuerza de voluntad.</p><br>              
+                </artice>
+
+                <artice class="article">
+                    <h2>Los síntomas de la depresión no son personales.</h2><br>
+                    <p> La depresión dificulta que una persona se conecte a un nivel emocional profundo con otra persona, incluso con las personas a las que más quiere. También es frecuente que las personas con depresión digan cosas hirientes y estallen en ira. Recuerde que es la depresión la que habla, no su ser querido, así que intente no tomárselo personal.</p>              
+                <br></artice>
+
+                <artice class="article">
+                    <h2>Ocultar el problema no hará que desaparezca. </h2><br>
+                    <p> No ayuda a nadie de los involucrados que intente poner excusas, encubrir el problema o mentir por un amigo o familiar con depresión. De hecho, esto puede hacer que la persona con depresión no busque tratamiento.</p><br>              
+                </artice>
+
+                <artice class="article">
+                    <h2>Su ser querido no es flojo ni está desmotivado. </h2><br>
+                    <p>Cuando se sufre depresión, tan solo pensar en hacer las cosas que podrían ayudarle a sentirse mejor parece agotador o imposible de poner en práctica. Tenga paciencia mientras anima a su ser querido a dar los primeros pequeños pasos hacia la recuperación.</p><br>              
+                </artice>
+
+                <artice class="article">
+                    <h2>No puede «arreglar» la depresión de otra persona.</h2><br>
+                    <p> Por mucho que quiera, no puede rescatar a alguien de la depresión ni solucionar el problema por esa persona. Usted no tiene la culpa de la depresión de su ser querido ni es responsable de su felicidad (o de la falta de ella). Aunque pueda ofrecer cariño y apoyo, en realidad, la recuperación está en manos de la persona con depresión.
+                    </p><br>              
+                </artice> 
+            </section>
+
+            <aside>
+               <form>
+                <img src="seis.jpg" class="img-seis"><br>
+                <img src="cuatro.jpg" class="img-cuatro"><br>
+                <img src="cinco.jpg" class="img-cinco"><br>
+               </form>
+            </aside>
+            
+    </div>
+</body>
+</html>

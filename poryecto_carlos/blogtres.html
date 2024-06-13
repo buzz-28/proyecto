@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        padding: 25px;
+        background-color: white;
+        color: black;
+        font-size: 25px;
+      }
+      .dark-mode {
+        background-color: black;
+        color: white;
+      }
+      
+    </style>
+  </head>
+  <body>
+    <div>
+        <label class="switch">
+            <input type="checkbox" onclick="darkMode()" >
+            <span class="slider"></span>
+          
+          </label>
+    </div>
+    <script>
+      function darkMode() {
+        var element = document.body;
+        element.classList.toggle("dark-mode");
+      }
+    </script>
+  </body>
+   <!--boton-->
+<center>
+    <a href="/inicio.html"><button>
+      <span class="box">
+          Inicio
+      </span>
+  </button></a>
+  </center>
+  
+</html>
+<!DOCTYPE html>
+<style>
+    *{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    background:  #ffffff;
+    font-family: Bradley Hand ITC, Helvetica, sans-serif;
+    font-size: 130%;
+}
+#container{
+    width: 90%;
+    margin: 0px auto;
+}
+header h1{
+    background: #cc03e6;
+    height: 200px;
+    width: 100%;
+    text-align: center;
+    line-height: 200px;
+    color: #ffffff;
+    border-bottom: 10px solid #ffffff;
+    font-size: 50px;   
+}
+nav{
+    background: #000000;
+    height: 50px;
+    border-bottom: 5px solid #ffffff ;
+}
+nav ul li{
+    float: left;
+    list-style: none;
+    margin: 10px;
+    color: #ffffff;
+    font-size: 20px;
+    line-height: 30px;
+}
+.clear{
+    clear: both;
+}
+#contenido{
+    float: left;
+    width: calc(80% - 80px);
+    min-height: 500px;
+    background: #ffffff;
+    padding: 40px;
+}
+.article{
+    color: #000000;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #000000;
+}
+aside{
+    float: left;
+    width: calc(20% - 20px);
+    min-height: 400px;
+    color: #ffffff;
+    background: #e603e2;
+    padding: 10px;
+}
+footer{
+    background: #000000;
+    color: #ffffff;
+    text-align: center;
+    height: 50px;
+    line-height: 50px;
+}
+.img-tres{
+    width: 250px;
+    height: 200px;
+    }
+.img-uno{
+    width: 250px;
+    height: 200px;
+    }    
+.img-dos{
+    width: 250px;
+    height: 200px;
+    }        
+     /*boton inicio*/
+   .box {
+  width: 140px;
+  height: auto;
+  float: left;
+  transition: .5s linear;
+  position: relative;
+  display: block;
+  overflow: hidden;
+  padding: 15px;
+  text-align: center;
+  margin: 0 5px;
+  background: transparent;
+  text-transform: uppercase;
+  font-weight: 900;
+}
+
+.box:before {
+  position: absolute;
+  content: '';
+  left: 0;
+  bottom: 0;
+  height: 4px;
+  width: 100%;
+  border-bottom: 4px solid transparent;
+  border-left: 4px solid transparent;
+  box-sizing: border-box;
+  transform: translateX(100%);
+}
+
+.box:after {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  border-top: 4px solid transparent;
+  border-right: 4px solid transparent;
+  box-sizing: border-box;
+  transform: translateX(-100%);
+}
+
+.box:hover {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.box:hover:before {
+  border-color: #262626;
+  height: 100%;
+  transform: translateX(0);
+  transition: .3s transform linear, .3s height linear .3s;
+}
+
+.box:hover:after {
+  border-color: #262626;
+  height: 100%;
+  transform: translateX(0);
+  transition: .3s transform linear, .3s height linear .5s;
+}
+
+button {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  background: transparent;
+}
+/* Tema */
+.switch {
+  font-size: 17px;
+  position: relative;
+  display: inline-block;
+  width: 3.5em;
+  height: 2em;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #2196F3;
+  transition: .4s;
+  border-radius: 30px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 1.4em;
+  width: 1.4em;
+  border-radius: 20px;
+  left: 0.3em;
+  bottom: 0.3em;
+  background-color: yellow;
+  transition: .4s;
+}
+
+.switch input:checked + .slider:before {
+  background-color: black;
+  border-radius: 50px;
+  box-shadow: inset 9px 0px 1px 0px white;
+}
+
+.switch input:checked + .slider {
+  background-color: black;
+}
+
+.switch input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+.switch input:checked + .slider:before {
+  transform: translateX(1.5em);
+}
+</style>
+<html lang="es">
+<head> 
+<meta charset="utf-8"/>
+<title>Blog uno</title>
+</head>
+<body>
+    <div id="container">
+        <header>
+            <h1>CAUSAS DE LA DEPRESIÓN</h1>
+        </header>
+        <nav>
+            <ul>
+                <li>Principal</li>
+                <li>Ayuda</li>
+                <li>Contacto</li>
+                </ul>
+                </nav>
+            <div class="clear"></div>
+        
+            <section id="contenido">
+                <artice class="article">
+                <p>Hay varias posibles causas de depresión. Pueden ir desde lo biológico hasta lo circunstancial.
+                    Las causas comunes incluyen:<BR><BR>
+                    •Antecedentes familiares. Corres un mayor riesgo de desarrollar depresión si tienes antecedentes familiares de depresión u otro trastorno del estado de ánimo.<BR><BR>
+                    •Trauma en la primera infancia. Algunos eventos afectan la forma en que tu cuerpo reacciona al miedo y las situaciones estresantes.<BR><BR>
+                    •Estructura cerebral. Hay un mayor riesgo de depresión si el lóbulo frontal del cerebro es menos activo. Sin embargo, los científicos no saben si esto sucede antes o después de la aparición de síntomas de depresión.<BR><BR>
+                    •Afecciones médicas. Ciertas afecciones pueden ponerte en mayor riesgo, como alguna enfermedad crónica, insomnio, dolor crónico o trastorno por déficit de atención e hiperactividad.<BR><BR>
+                    •Uso de drogas. Un historial de abuso de drogas o alcohol puede aumentar tu riesgo.<BR><BR>
+                    Cerca del 21 por ciento de las personas que tienen un problema de adicción también experimentan depresión. Además de estas causas, otros factores de riesgo para la depresión incluyen:<BR><BR>
+                    •baja autoestima o ser autocrítico<BR><BR>
+                    •antecedentes personales de enfermedad mental<BR><BR>
+                    •ciertos medicamentos<BR><BR>
+                    •eventos estresantes, como la pérdida de un ser querido, problemas económicos o un divorcio
+                    Muchos factores pueden influir en los sentimientos de depresión, así como quién desarrolla la afección y quién no.<BR><BR>
+                    Las causas de la depresión suelen estar vinculadas a otros elementos de tu salud.<BR><BR>
+                    Sin embargo, en muchos casos, los proveedores de salud no pueden determinar cuál es la causa de la depresión.                    
+                </artice>
+
+            </section>
+
+            <aside>
+               <form>
+                <br><br><img src="img3.jpg" class="img-tres"><br>
+                <p><marquee>!Cree en ti mismo y en todo lo que eres. Sabes que hay algo dentro de ti que es más grande que cualquier obstáculo. (Cita de Christian D. Larson)¡</marquee></p><br>
+                <img src="img1.jpg" class="img-uno"><br>
+                <p><marquee>!La autoestima no es un regalo, es una conquista. (Cita de Joan Didion)¡</marquee></p><br>
+                <img src="img2.jpg" class="img-dos"><br><br>
+               </form>
+            </aside>
+            
+    </div>
+</body>
+</html>

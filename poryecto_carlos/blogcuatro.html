@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        padding: 25px;
+        background-color: white;
+        color: black;
+        font-size: 25px;
+      }
+      .dark-mode {
+        background-color: black;
+        color: white;
+      }
+      
+    </style>
+  </head>
+  <body>
+    <div>
+        <label class="switch">
+            <input type="checkbox" onclick="darkMode()" >
+            <span class="slider"></span>
+          
+          </label>
+    </div>
+    <script>
+      function darkMode() {
+        var element = document.body;
+        element.classList.toggle("dark-mode");
+      }
+    </script>
+  </body>
+   <!--boton-->
+   <center>
+    <a href="/inicio.html"><button>
+      <span class="box">
+          Inicio
+      </span>
+  </button></a>
+  </center>
+</html>
+<!DOCTYPE html>
+<style>
+    *{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    background:  #ffffff;
+    font-family: Bradley Hand ITC, Helvetica, sans-serif;
+    font-size: 130%;
+}
+#container{
+    width: 90%;
+    margin: 0px auto;
+}
+header h1{
+    background: #117b23;
+    height: 200px;
+    width: 100%;
+    text-align: center;
+    line-height: 200px;
+    color: #ffffff;
+    border-bottom: 10px solid #ffffff;
+    font-size: 50px;   
+}
+nav{
+    background: #000000;
+    height: 50px;
+    border-bottom: 5px solid #ffffff ;
+}
+nav ul li{
+    float: left;
+    list-style: none;
+    margin: 10px;
+    color: #ffffff;
+    font-size: 20px;
+    line-height: 30px;
+}
+.clear{
+    clear: both;
+}
+#contenido{
+    float: right;
+    width: calc(50% - 50px);
+    min-height: 500px;
+    background: #ffffff;
+    padding: 40px;
+}
+.article{
+    color: #000000;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #000000;
+}
+aside{
+    float: right;
+    width: calc(50% - 50px);
+    min-height: 2000px;
+    color: #ffffff;
+    background: #117b23;
+    padding: 10px;
+}
+footer{
+    background: #000000;
+    color: #ffffff;
+    text-align: center;
+    height: 50px;
+    line-height: 50px;
+}
+.img-fe{
+    width: 600px;
+    height: 400px;
+    }
+.video-tra{
+ width: 600px;
+height: 400px;   
+}
+.img-5{
+    width: 600px;
+    height: 400px;
+    } 
+     /*boton inicio*/
+   .box {
+  width: 140px;
+  height: auto;
+  float: left;
+  transition: .5s linear;
+  position: relative;
+  display: block;
+  overflow: hidden;
+  padding: 15px;
+  text-align: center;
+  margin: 0 5px;
+  background: transparent;
+  text-transform: uppercase;
+  font-weight: 900;
+}
+
+.box:before {
+  position: absolute;
+  content: '';
+  left: 0;
+  bottom: 0;
+  height: 4px;
+  width: 100%;
+  border-bottom: 4px solid transparent;
+  border-left: 4px solid transparent;
+  box-sizing: border-box;
+  transform: translateX(100%);
+}
+
+.box:after {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  border-top: 4px solid transparent;
+  border-right: 4px solid transparent;
+  box-sizing: border-box;
+  transform: translateX(-100%);
+}
+
+.box:hover {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.box:hover:before {
+  border-color: #262626;
+  height: 100%;
+  transform: translateX(0);
+  transition: .3s transform linear, .3s height linear .3s;
+}
+
+.box:hover:after {
+  border-color: #262626;
+  height: 100%;
+  transform: translateX(0);
+  transition: .3s transform linear, .3s height linear .5s;
+}
+
+button {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  background: transparent;
+}
+/* Tema */
+.switch {
+  font-size: 17px;
+  position: relative;
+  display: inline-block;
+  width: 3.5em;
+  height: 2em;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #2196F3;
+  transition: .4s;
+  border-radius: 30px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 1.4em;
+  width: 1.4em;
+  border-radius: 20px;
+  left: 0.3em;
+  bottom: 0.3em;
+  background-color: yellow;
+  transition: .4s;
+}
+
+.switch input:checked + .slider:before {
+  background-color: black;
+  border-radius: 50px;
+  box-shadow: inset 9px 0px 1px 0px white;
+}
+
+.switch input:checked + .slider {
+  background-color: black;
+}
+
+.switch input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+.switch input:checked + .slider:before {
+  transform: translateX(1.5em);
+}
+</style>
+<html lang="es">
+<head> 
+<meta charset="utf-8"/>
+<title>Blog uno</title>
+</head>
+<body>
+    <div id="container">
+        <header>
+            <h1>TRATAMIENTO</h1>
+        </header>
+        <nav>
+            <ul>
+                <li>Principal</li>
+                <li>Ayuda</li>
+                <li>Contacto</li>
+                </ul>
+                </nav>
+            <div class="clear"></div>
+        
+            <section id="contenido">
+                <artice class="article">
+                <p>Es común combinar tratamientos médicos y terapias de estilo de vida, incluyendo los siguientes:</p><br>
+                <h2>Medicamentos</h2><br>
+                <p>Tu proveedor de salud puede recetarte:<BR><BR>
+                    •antidepresivos<BR><BR>
+                    •medicamentos para la ansiedad<BR><BR>
+                    •medicamentos antipsicóticos<BR><BR>
+                    Cada tipo de medicamento que se usa para tratar la depresión tiene beneficios y posibles riesgos.</p><br>              
+                </artice>
+
+                <artice class="article">
+                    <h2>Psicoterapia</h2><br>
+                    <p>Hablar con un terapeuta puede ayudarte a aprender habilidades para lidiar con sentimientos negativos. También puedes beneficiarte de sesiones de terapia familiar o grupal.</p>              
+                <br></artice>
+
+                <artice class="article">
+                    <h2>Terapia con luz</h2><br>
+                    <p>La exposición a dosis de luz blanca puede ayudar a regular tu estado de ánimo y mejorar los síntomas de la depresión. La terapia con luz se utiliza comúnmente en el trastorno afectivo estacional, que ahora se llama trastorno depresivo mayor con patrón estacional.</p><br>              
+                </artice>
+
+                <artice class="article">
+                    <h2>Terapias alternativas</h2><br>
+                    <p>Pregúntale a tu proveedor de salud sobre la acupuntura o la meditación. Algunos suplementos herbales también se utilizan para tratar la depresión, como la hierba de San Juan, SAMe y aceite de pescado.<BR><BR>
+                        Habla con tu proveedor de salud antes de tomar un suplemento o combinar un suplemento con medicamentos recetados porque algunos suplementos pueden interactuar con ciertos fármacos. Algunos suplementos también pueden empeorar la depresión o reducir la eficacia de la medicación.</p><br>              
+                </artice>
+
+                <artice class="article">
+                    <h2>Ejercicio</h2><br>
+                    <p>Intenta realizar 30 minutos de actividad física de 3 a 5 días a la semana. El ejercicio puede aumentar la producción de endorfinas de tu cuerpo, que son hormonas que mejoran tu estado de ánimo.</p><br>              
+                </artice>
+
+                <artice class="article">
+                    <h2>Evita el alcohol y las drogas</h2><br>
+                    <p>Beber o abusar de las drogas puede hacer que te sientas mejor durante un rato. Pero a largo plazo, estas sustancias pueden empeorar los síntomas de depresión y ansiedad.</p><br>              
+                </artice>
+
+                <artice class="article">
+                    <h2>Aprende a decir no</h2><br>
+                    <p>Sentirte abrumado puede empeorar los síntomas de ansiedad y depresión. Establecer límites en tu vida profesional y personal puede ayudarte a sentirte mejor.</p><br>              
+                </artice>
+
+                <artice class="article">
+                    <h2>Cuídate</h2><br>
+                    <p>También puedes mejorar los síntomas de la depresión cuidando de ti mismo. Esto incluye dormir lo suficiente, llevar una dieta saludable, evitar a las personas negativas y participar en actividades agradables.<BR>
+                        En ocasiones la depresión no responde a la medicación. Tu proveedor de salud puede recomendarte otras opciones de tratamiento si tus síntomas no mejoran.<BR><BR>
+                        Estas incluyen terapia electroconvulsiva, o estimulación magnética transcraneal repetitiva para tratar la depresión y mejorar tu estado de ánimo.</p><br>              
+                </artice>
+
+                
+
+            </section>
+
+            <aside>
+               <form>
+                <img src="feliz.jpg" class="img-fe"><br>
+                <p><br>INTRODUCCIÓN <br>Vivir con depresión puede ser difícil, pero el tratamiento puede ayudar a mejorar tu calidad de vida. Habla con tu proveedor de salud sobre las posibles opciones.<BR><BR>
+                    Puedes controlar con éxito los síntomas con una forma de tratamiento, o podrías encontrar que una combinación de tratamientos funciona mejor.<BR></p><br>
+                <video  src="tratamiento1.mp4" class="video-tra" controls></video>
+                 <p><h2>FRASES</h2></p>
+                 <h2><br>«Estaba culpando en lugar de asumir la responsabilidad. Tomaba el camino fácil que no llevaba a ninguna parte en vez de tomar el difícil que llevaba a alguna parte». –Maxime Lagacé<br>
+
+                    <br>«Incluso perdida y sola, seguí adelante. Incluso asustada y confundida, seguí adelante. Al final, eso es lo que debes hacer: seguir adelante.» – Maxime Lagacé<br>
+                    
+                   <br> «Algunos cambios parecen negativos en la superficie pero pronto te darás cuenta de que se está creando espacio en tu vida para que surja algo nuevo». – Eckhart Tolle<br>
+                    
+                    <br>«Ve al lugar dentro que te duele. La parte que es solitaria o triste. Tu corazón roto. Tu ego herido. La parte de ti que se preocupa siempre será así. Ve allí ahora y repite en silencio: Que seas feliz. Que estés a salvo. Que te llenes de amor. No estás solo». – Jason Garner</h2><br>
+               </form>
+            </aside>
+            
+    </div>
+</body>
+</html>

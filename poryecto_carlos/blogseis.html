@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        padding: 25px;
+        background-color: white;
+        color: black;
+        font-size: 25px;
+      }
+      .dark-mode {
+        background-color: black;
+        color: white;
+      }
+      
+    </style>
+  </head>
+  <body>
+    <div>
+        <label class="switch">
+            <input type="checkbox" onclick="darkMode()" >
+            <span class="slider"></span>
+          
+          </label>
+    </div>
+    <script>
+      function darkMode() {
+        var element = document.body;
+        element.classList.toggle("dark-mode");
+      }
+    </script>
+  </body>
+     <!--boton-->
+<center>
+    <a href="/inicio.html"><button>
+      <span class="box">
+          Inicio
+      </span>
+  </button></a>
+  </center>
+</html>
+<!DOCTYPE html>
+<style>
+    *{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    background:  #ffffff;
+    font-family: Bradley Hand ITC, Helvetica, sans-serif;
+    font-size: 130%;
+}
+#container{
+    width: 90%;
+    margin: 0px auto;
+}
+header h1{
+    background: #cc03e6;
+    height: 200px;
+    width: 100%;
+    text-align: center;
+    line-height: 200px;
+    color: #ffffff;
+    border-bottom: 10px solid #ffffff;
+    font-size: 50px;   
+}
+nav{
+    background: #000000;
+    height: 50px;
+    border-bottom: 5px solid #ffffff ;
+}
+nav ul li{
+    float: left;
+    list-style: none;
+    margin: 10px;
+    color: #ffffff;
+    font-size: 20px;
+    line-height: 30px;
+}
+.clear{
+    clear: both;
+}
+#contenido{
+    float: left;
+    width: calc(80% - 80px);
+    min-height: 500px;
+    background: #ffffff;
+    padding: 40px;
+}
+.article{
+    color: #000000;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #000000;
+}
+aside{
+    float: left;
+    width: calc(20% - 20px);
+    min-height: 400px;
+    color: #ffffff;
+    background: #e603e2;
+    padding: 10px;
+}
+footer{
+    background: #000000;
+    color: #ffffff;
+    text-align: center;
+    height: 50px;
+    line-height: 50px;
+}
+.img-tres{
+    width: 250px;
+    height: 200px;
+    }
+.img-uno{
+    width: 250px;
+    height: 200px;
+    }    
+.img-dos{
+    width: 250px;
+    height: 200px;
+    }   
+     /*boton inicio*/
+   .box {
+  width: 140px;
+  height: auto;
+  float: left;
+  transition: .5s linear;
+  position: relative;
+  display: block;
+  overflow: hidden;
+  padding: 15px;
+  text-align: center;
+  margin: 0 5px;
+  background: transparent;
+  text-transform: uppercase;
+  font-weight: 900;
+}
+
+.box:before {
+  position: absolute;
+  content: '';
+  left: 0;
+  bottom: 0;
+  height: 4px;
+  width: 100%;
+  border-bottom: 4px solid transparent;
+  border-left: 4px solid transparent;
+  box-sizing: border-box;
+  transform: translateX(100%);
+}
+
+.box:after {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  border-top: 4px solid transparent;
+  border-right: 4px solid transparent;
+  box-sizing: border-box;
+  transform: translateX(-100%);
+}
+
+.box:hover {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.box:hover:before {
+  border-color: #262626;
+  height: 100%;
+  transform: translateX(0);
+  transition: .3s transform linear, .3s height linear .3s;
+}
+
+.box:hover:after {
+  border-color: #262626;
+  height: 100%;
+  transform: translateX(0);
+  transition: .3s transform linear, .3s height linear .5s;
+}
+
+button {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  background: transparent;
+}     
+/* Tema */
+.switch {
+  font-size: 17px;
+  position: relative;
+  display: inline-block;
+  width: 3.5em;
+  height: 2em;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #2196F3;
+  transition: .4s;
+  border-radius: 30px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 1.4em;
+  width: 1.4em;
+  border-radius: 20px;
+  left: 0.3em;
+  bottom: 0.3em;
+  background-color: yellow;
+  transition: .4s;
+}
+
+.switch input:checked + .slider:before {
+  background-color: black;
+  border-radius: 50px;
+  box-shadow: inset 9px 0px 1px 0px white;
+}
+
+.switch input:checked + .slider {
+  background-color: black;
+}
+
+.switch input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+.switch input:checked + .slider:before {
+  transform: translateX(1.5em);
+}
+</style>
+<html lang="es">
+<head> 
+<meta charset="utf-8"/>
+<title>Blog uno</title>
+</head>
+<body>
+    <div id="container">
+        <header>
+            <h1>FACTORES DE RIESGOS DE LA DEPRESION</h1>
+        </header>
+        <nav>
+            <ul>
+                <li>Principal</li>
+                <li>Ayuda</li>
+                <li>Contacto</li>
+                </ul>
+                </nav>
+            <div class="clear"></div>
+        
+            <section id="contenido">
+                <artice class="article">
+                <h1>ALGUNOS FACTORES DE RIESGO SON:</h1>
+                <p><b>Sexo:</b>es más frecuente entre las mujeres de edades entre los 12 y los 55 años, sin diferencias fuera de este intervalo de edad.<BR><BR>
+                    <b>Edad:</b>es más habitual en personas de entre 18 y 44 años. Según la edad existen diferencias respecto a los síntomas más habituales. Por ejemplo, en los niños son más frecuentes las quejas físicas (dolor de cabeza, dolor abdominal), la irritabilidad y el aislamiento social, mientras que en los adolescentes se asocia a trastornos de conducta, trastornos de la conducta alimentaria y abuso de sustancias. En personas mayores suelen ser frecuentes las quejas físicas y los síntomas cognitivos (sensación de pérdida de memoria, falta de atención y concentración).
+                   <BR><b>Estado civil:</b>bes más frecuente en personas con un estado civil de soltería, separación o divorcio.<BR>
+                    Consumo de sustancias: el consumo de sustancias tóxicas como el alcohol, incluso en cantidades moderadas, es un factor de riesgo.<BR>
+                    <BR><b>Comorbilidad:</b> padecer otros trastornos mentales puede predisponer también a la depresión, como los trastornos de ansiedad. Por otro lado, las enfermedades físicas, como la migraña, las enfermedades cardíacas, la diabetes, los problemas tiroideos y otras enfermedades endocrinas, pueden aumentar el riesgo de depresión.<BR>
+                    <BR><b>Factores sociales:</b> vivir situaciones estresantes crónicas, la falta de recursos económicos y de apoyo familiar o estar en situación de desempleo. Las personas de grupos socioeconómicos más desfavorecidos tienen mayor riesgo de depresión.<BR>
+                    <BR><b>Factores psicológicos y acontecimientos adversos:</b> haber sufrido experiencias traumáticas durante la infancia puede predisponer a algunos trastornos mentales, entre ellos, la depresión. Los acontecimientos vitales adversos, como los problemas familiares, de pareja o en el trabajo, aunque no se consideran necesarios ni suficientes para provocar una depresión como tal, cuando se suman y se mantienen en el tiempo, pueden generar estrés y ansiedad, y llegar a afectar al estado de ánimo. Determinados rasgos de personalidad, así como la tendencia a tener pensamientos negativos, también pueden constituir un factor de riesgo.<BR>
+                    <BR><b>Factores genéticos:</b>los familiares de primer grado de pacientes con trastorno depresivo mayor tienen el doble de posibilidades de presentar depresión que la población general. Esta proporción también es importante en los de segundo grado.<BR></p>                   
+                </artice>
+
+            </section>
+
+            <aside>
+               <form>
+                <br><br><img src="uno.jpg" class="img-tres"><br>
+                <p><marquee>!Cree en ti mismo y en todo lo que eres. Sabes que hay algo dentro de ti que es más grande que cualquier obstáculo. (Cita de Christian D. Larson)¡</marquee></p><br>
+                <img src="dos.jpg" class="img-uno"><br>
+                <p><marquee>!La autoestima no es un regalo, es una conquista. (Cita de Joan Didion)¡</marquee></p><br>
+                <img src="tres.jpg" class="img-dos"><br><br><br>
+               </form>
+            </aside>
+            
+    </div>
+</body>
+</html>
